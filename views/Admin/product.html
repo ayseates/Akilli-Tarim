@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+  <script src="https://kit.fontawesome.com/d68d319f71.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/css/product.css">
+</head>
+
+<body>
+  <div id='parent_div'>
+    <div id="left_div">
+      <div id="left_div_1">
+        <img width="30%" src="../Media/logo1.png" alt="">
+        <h4 style="color:white; margin-left: 5px;">HomeDecor</h4>
+      </div>
+      <div id="left_div_2">
+        <div><button id="HomeDecor">Home</button></div>
+        <div><button id="showAllBtn">Category</button></div>
+        <div><button id="add">Discounts</button></div>
+        <div><button id="showUserBtn">Size</button></div>
+        <div><button>Color</button></div>
+        <div><button>Fabric</button></div>
+        <div><button>Latest Arrivals</button></div>
+
+      </div>
+      <hr>
+      <div id="left_div_3"></div>
+    </div>
+    <div id="right_div">
+      <div id="right_div_1">
+        <div> <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="CTRL K Search Anything...">
+          <a href="/views/Admin/cart.html"><i style="color:black" class="fa-solid fa-cart-shopping"></i></a>
+          <i class="fa-regular fa-circle-question"></i>
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div id="adminName"></div>
+      </div>
+      <div id="right_div_2">
+        <!-- <div id="showAdd"></div>
+        <div id="showAll"></div> -->
+      </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+  let adminName = document.getElementById("adminName")
+  adminName.innerHTML = `<h5>Hello ${localStorage.getItem("username") || ""}</h5>`
+
+
+  document.getElementById("HomeDecor").addEventListener("click", () => {
+    window.location.href = "../index.html"
+  })
+
+</script>
+<script src="/javascript/product.js"></script>
